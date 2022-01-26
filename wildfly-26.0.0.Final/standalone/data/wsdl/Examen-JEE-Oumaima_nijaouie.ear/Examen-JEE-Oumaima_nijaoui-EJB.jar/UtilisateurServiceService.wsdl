@@ -1,0 +1,56 @@
+<?xml version="1.0" ?><wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://services/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="UtilisateurServiceService" targetNamespace="http://services/">
+  <wsdl:types>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://services/" elementFormDefault="unqualified" targetNamespace="http://services/" version="1.0">
+
+  <xs:element name="addCompe" type="tns:addCompe"></xs:element>
+
+  <xs:element name="addCompeResponse" type="tns:addCompeResponse"></xs:element>
+
+  <xs:complexType name="addCompe">
+    <xs:sequence>
+      <xs:element name="solde" type="xs:int"></xs:element>
+      <xs:element minOccurs="0" name="name" type="xs:string"></xs:element>
+      <xs:element minOccurs="0" name="password" type="xs:string"></xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="addCompeResponse">
+    <xs:sequence></xs:sequence>
+  </xs:complexType>
+
+</xs:schema>
+  </wsdl:types>
+  <wsdl:message name="addCompe">
+    <wsdl:part element="tns:addCompe" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="addCompeResponse">
+    <wsdl:part element="tns:addCompeResponse" name="parameters">
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="UtilisateurService">
+    <wsdl:operation name="addCompe">
+      <wsdl:input message="tns:addCompe" name="addCompe">
+    </wsdl:input>
+      <wsdl:output message="tns:addCompeResponse" name="addCompeResponse">
+    </wsdl:output>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UtilisateurServiceServiceSoapBinding" type="tns:UtilisateurService">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"></soap:binding>
+    <wsdl:operation name="addCompe">
+      <soap:operation soapAction="" style="document"></soap:operation>
+      <wsdl:input name="addCompe">
+        <soap:body use="literal"></soap:body>
+      </wsdl:input>
+      <wsdl:output name="addCompeResponse">
+        <soap:body use="literal"></soap:body>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UtilisateurServiceService">
+    <wsdl:port binding="tns:UtilisateurServiceServiceSoapBinding" name="UtilisateurServicePort">
+      <soap:address location="http://localhost:8080/Examen-JEE-Oumaima_nijaoui-EJB/UtilisateurService"></soap:address>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

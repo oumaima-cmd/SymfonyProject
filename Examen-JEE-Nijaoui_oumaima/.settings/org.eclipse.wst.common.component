@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+                
+    
+    
+    <wb-module deploy-name="Examen-JEE-Oumaima_nij">
+                                
+        
+        
+        <wb-resource deploy-path="/" source-path="/EarContent" tag="defaultRootSource"/>
+                                
+        
+        
+        <dependent-module archiveName="Examen-JEE-Oumaima_Nijaoui-EJB.jar" deploy-path="/" handle="module:/resource/Examen-JEE-Oumaima_nijaoui_EJB/Examen-JEE-Oumaima_nijaoui-EJB">
+                                                
+            
+            
+            <dependent-object/>
+                                                
+            
+            
+            <dependency-type>uses</dependency-type>
+                                            
+        
+        
+        </dependent-module>
+        <dependent-module archiveName="Partie_Web_JEE.war" deploy-path="/" handle="module:/resource/Partie_Web_JEE/Partie_Web_JEE">
+            <dependent-object/>
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+                            
+    
+    
+    </wb-module>
+            
+
+
+</project-modules>
